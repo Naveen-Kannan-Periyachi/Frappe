@@ -42,3 +42,9 @@ def mark_no_show_appointments():
 				title=f"No-show marking failed: {name}",
 				message=frappe.get_traceback(),
 			)
+
+
+
+def daily_maintenance():
+    frappe.msgprint("Daily Maintenance")
+	

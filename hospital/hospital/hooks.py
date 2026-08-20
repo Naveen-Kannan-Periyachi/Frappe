@@ -186,7 +186,8 @@ after_install = "hospital.setup.after_install"
 
 scheduler_events = {
 	"daily": [
-		"hospital.tasks.mark_no_show_appointments"
+		"hospital.tasks.mark_no_show_appointments",
+		"hospital.tasks.daily_maintenance"
 	],
 }
 
