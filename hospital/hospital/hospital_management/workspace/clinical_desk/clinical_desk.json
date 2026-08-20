@@ -1,0 +1,108 @@
+{
+ "app": "hospital",
+ "charts": [],
+ "content": "[{\"id\": \"Clinical Desk_hdr\", \"type\": \"header\", \"data\": {\"text\": \"Clinical Consultations & Prescriptions\", \"level\": 2}}, {\"id\": \"Clinical Desk_sc_0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Active Visits\", \"col\": 4}}, {\"id\": \"Clinical Desk_sc_1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Medicines Catalog\", \"col\": 4}}, {\"id\": \"Clinical Desk_sp\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"Clinical Desk_cd_0\", \"type\": \"card\", \"data\": {\"card_name\": \"Consultations\", \"col\": 6}}, {\"id\": \"Clinical Desk_cd_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Pharmacy & Medication\", \"col\": 6}}]",
+ "creation": "2026-08-20 15:19:46.264634",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "stethoscope",
+ "idx": 3,
+ "indicator_color": "cyan",
+ "is_hidden": 0,
+ "label": "Clinical Desk",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Consultations",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patient Visits",
+   "link_count": 0,
+   "link_to": "Visit",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patients",
+   "link_count": 0,
+   "link_to": "Patient",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pharmacy & Medication",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Medicine Catalog",
+   "link_count": 0,
+   "link_to": "Medicine",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-20 15:19:46.264634",
+ "modified_by": "Administrator",
+ "module": "Hospital Management",
+ "name": "Clinical Desk",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Hospital Management",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Doctor"
+  },
+  {
+   "role": "Nurse"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Active Visits",
+   "link_to": "Visit",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Medicines Catalog",
+   "link_to": "Medicine",
+   "type": "DocType"
+  }
+ ],
+ "sidebar_items": [],
+ "standard": 1,
+ "title": "Clinical Desk",
+ "type": "Workspace"
+}

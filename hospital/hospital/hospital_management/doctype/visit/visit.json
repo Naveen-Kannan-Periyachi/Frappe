@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "VIS-.#####",
+ "creation": "2026-08-11 19:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "appointment",
+  "patient",
+  "doctor",
+  "visit_datetime",
+  "reason",
+  "symptoms",
+  "diagnosis",
+  "notes",
+  "follow_up_date",
+  "status",
+  "prescribed_medicines"
+ ],
+ "fields": [
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Appointment",
+   "options": "Appointment"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Doctor",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Visit Date & Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason for Visit"
+  },
+  {
+   "fieldname": "symptoms",
+   "fieldtype": "Text Editor",
+   "label": "Symptoms"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Text Editor",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nCompleted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "prescribed_medicines",
+   "fieldtype": "Table",
+   "label": "Prescribed Medicines",
+   "options": "Prescribed Medicine"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-13 15:37:00.000000",
+ "modified_by": "Administrator",
+ "module": "Hospital Management",
+ "name": "Visit",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Doctor",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Nurse"
+  },
+  {
+   "read": 1,
+   "role": "Receptionist"
+  },
+  {
+   "read": 1,
+   "role": "Pharmacist"
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient",
+ "track_changes": 1
+}

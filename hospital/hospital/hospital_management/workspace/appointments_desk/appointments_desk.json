@@ -1,0 +1,115 @@
+{
+ "app": "hospital",
+ "charts": [],
+ "content": "[{\"id\": \"Appointments Desk_hdr\", \"type\": \"header\", \"data\": {\"text\": \"Appointments & Reception Desk\", \"level\": 2}}, {\"id\": \"Appointments Desk_sc_0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Appointments List\", \"col\": 4}}, {\"id\": \"Appointments Desk_sc_1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Patient Registry\", \"col\": 4}}, {\"id\": \"Appointments Desk_sp\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"Appointments Desk_cd_0\", \"type\": \"card\", \"data\": {\"card_name\": \"Reception Operations\", \"col\": 6}}, {\"id\": \"Appointments Desk_cd_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Staff & Departments\", \"col\": 6}}]",
+ "creation": "2026-08-20 15:19:46.219639",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "calendar",
+ "idx": 2,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Appointments Desk",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reception Operations",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "All Appointments",
+   "link_count": 0,
+   "link_to": "Appointment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patient Database",
+   "link_count": 0,
+   "link_to": "Patient",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Staff & Departments",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Doctors & Employees",
+   "link_count": 0,
+   "link_to": "Employee",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hospital Departments",
+   "link_count": 0,
+   "link_to": "Department",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-20 15:19:46.219639",
+ "modified_by": "Administrator",
+ "module": "Hospital Management",
+ "name": "Appointments Desk",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Hospital Management",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Receptionist"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Appointments List",
+   "link_to": "Appointment",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Patient Registry",
+   "link_to": "Patient",
+   "type": "DocType"
+  }
+ ],
+ "sidebar_items": [],
+ "standard": 1,
+ "title": "Appointments Desk",
+ "type": "Workspace"
+}

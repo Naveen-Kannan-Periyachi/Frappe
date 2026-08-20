@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:LTR-{#####}",
+ "creation": "2026-08-13 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "visit",
+  "patient",
+  "doctor",
+  "lab_test",
+  "request_date",
+  "status",
+  "result",
+  "result_date",
+  "technician_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "visit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Visit",
+   "options": "Visit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Doctor",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lab_test",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Lab Test",
+   "options": "Lab Test",
+   "reqd": 1
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "default": "Requested",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Requested\nSample Collected\nProcessing\nCompleted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Small Text",
+   "label": "Result"
+  },
+  {
+   "fieldname": "result_date",
+   "fieldtype": "Date",
+   "label": "Result Date"
+  },
+  {
+   "fieldname": "technician_notes",
+   "fieldtype": "Small Text",
+   "label": "Technician Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-13 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Hospital Management",
+ "name": "Lab Test Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Doctor",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Lab Technician"
+  },
+  {
+   "read": 1,
+   "role": "Receptionist"
+  },
+  {
+   "read": 1,
+   "role": "Nurse"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient"
+}

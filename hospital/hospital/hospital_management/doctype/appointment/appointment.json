@@ -1,0 +1,123 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "APP-.#####",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "patient",
+        "doctor",
+        "appointment_date",
+        "slot",
+        "status",
+        "arrival_time",
+        "cancellation_reason",
+        "previous_appointment"
+    ],
+    "fields": [
+        {
+            "fieldname": "patient",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Patient",
+            "options": "Patient",
+            "reqd": 1
+        },
+        {
+            "fieldname": "doctor",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Doctor",
+            "options": "Employee",
+            "reqd": 1
+        },
+        {
+            "fieldname": "appointment_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Appointment Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "slot",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Slot",
+            "options": "10:00 - 10:15\n10:15 - 10:30\n10:30 - 10:45\n10:45 - 11:00\n11:00 - 11:15",
+            "reqd": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Scheduled\nArrived\nIn Consultation\nCompleted\nCancelled\nNo Show",
+            "default": "Scheduled",
+            "read_only": 1,
+            "depends_on": "eval:!doc.__islocal",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "arrival_time",
+            "fieldtype": "Time",
+            "label": "Arrival Time",
+            "read_only": 1
+        },
+        {
+            "fieldname": "cancellation_reason",
+            "fieldtype": "Small Text",
+            "label": "Cancellation Reason",
+            "read_only": 1,
+            "depends_on": "eval:doc.status == 'Cancelled'"
+        },
+        {
+            "fieldname": "previous_appointment",
+            "fieldtype": "Link",
+            "label": "Previous Appointment",
+            "options": "Appointment",
+            "hidden": 1
+        }
+    ],
+    "links": [],
+    "module": "Hospital Management",
+    "name": "Appointment",
+    "naming_rule": "Expression",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Receptionist",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "read": 1,
+            "write": 1,
+            "role": "Doctor"
+        },
+        {
+            "read": 1,
+            "role": "Nurse"
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1
+}

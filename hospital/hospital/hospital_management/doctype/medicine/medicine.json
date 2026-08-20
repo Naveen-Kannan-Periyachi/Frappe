@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MED-.#####",
+ "creation": "2026-08-11 19:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "medicine_name",
+  "generic_name",
+  "medicine_type",
+  "manufacturer",
+  "strength",
+  "unit",
+  "description",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "medicine_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Medicine Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "generic_name",
+   "fieldtype": "Data",
+   "label": "Generic Name"
+  },
+  {
+   "fieldname": "medicine_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Medicine Type",
+   "options": "Tablet\nCapsule\nSyrup\nInjection\nCream\nOintment\nDrops\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "Manufacturer"
+  },
+  {
+   "fieldname": "strength",
+   "fieldtype": "Data",
+   "label": "Strength"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive",
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-12 12:35:28.647360",
+ "modified_by": "Administrator",
+ "module": "Hospital Management",
+ "name": "Medicine",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Pharmacist",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Doctor"
+  },
+  {
+   "read": 1,
+   "role": "Nurse"
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "medicine_name",
+ "track_changes": 1
+}

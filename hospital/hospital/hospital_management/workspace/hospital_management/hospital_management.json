@@ -1,0 +1,252 @@
+{
+ "app": "hospital",
+ "charts": [],
+ "content": "[{\"id\": \"Hospital Management_hdr\", \"type\": \"header\", \"data\": {\"text\": \"Hospital Management Overview\", \"level\": 2}}, {\"id\": \"Hospital Management_sc_0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Patients\", \"col\": 3}}, {\"id\": \"Hospital Management_sc_1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Appointments\", \"col\": 3}}, {\"id\": \"Hospital Management_sc_2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Visits\", \"col\": 3}}, {\"id\": \"Hospital Management_sc_3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fees\", \"col\": 3}}, {\"id\": \"Hospital Management_sp\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"Hospital Management_cd_0\", \"type\": \"card\", \"data\": {\"card_name\": \"Clinical & Operations\", \"col\": 4}}, {\"id\": \"Hospital Management_cd_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Master Data\", \"col\": 4}}, {\"id\": \"Hospital Management_cd_2\", \"type\": \"card\", \"data\": {\"card_name\": \"Billing & Diagnostics\", \"col\": 4}}]",
+ "creation": "2026-08-20 15:19:46.126092",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "activity",
+ "idx": 1,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "Hospital Management",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Clinical & Operations",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Appointment Scheduling",
+   "link_count": 0,
+   "link_to": "Appointment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Clinical Visits",
+   "link_count": 0,
+   "link_to": "Visit",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patient Registry",
+   "link_count": 0,
+   "link_to": "Patient",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master Data",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Doctors & Staff",
+   "link_count": 0,
+   "link_to": "Employee",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Departments",
+   "link_count": 0,
+   "link_to": "Department",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Medicine Catalog",
+   "link_count": 0,
+   "link_to": "Medicine",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lab Test Catalog",
+   "link_count": 0,
+   "link_to": "Lab Test",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Billing & Diagnostics",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fee Records",
+   "link_count": 0,
+   "link_to": "Fee",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lab Test Requests",
+   "link_count": 0,
+   "link_to": "Lab Test Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-20 15:19:46.126092",
+ "modified_by": "Administrator",
+ "module": "Hospital Management",
+ "name": "Hospital Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Patients",
+   "link_to": "Patient",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Appointments",
+   "link_to": "Appointment",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Visits",
+   "link_to": "Visit",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Fees",
+   "link_to": "Fee",
+   "type": "DocType"
+  }
+ ],
+ "sidebar_items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "default_workspace": 0,
+   "icon": "users",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Patient Management",
+   "link_to": "Patient",
+   "link_type": "DocType",
+   "open_in_new_tab": 0,
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "default_workspace": 0,
+   "icon": "calendar",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Appointments",
+   "link_to": "Appointment",
+   "link_type": "DocType",
+   "open_in_new_tab": 0,
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "default_workspace": 0,
+   "icon": "clipboard-list",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Visits & Consultations",
+   "link_to": "Visit",
+   "link_type": "DocType",
+   "open_in_new_tab": 0,
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "default_workspace": 0,
+   "icon": "flask-conical",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Lab Test Requests",
+   "link_to": "Lab Test Request",
+   "link_type": "DocType",
+   "open_in_new_tab": 0,
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "default_workspace": 0,
+   "icon": "credit-card",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Fee & Payments",
+   "link_to": "Fee",
+   "link_type": "DocType",
+   "open_in_new_tab": 0,
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "standard": 1,
+ "title": "Hospital Management",
+ "type": "Workspace"
+}

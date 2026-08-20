@@ -1,0 +1,98 @@
+{
+ "app": "hospital",
+ "charts": [],
+ "content": "[{\"id\": \"Billing Desk_hdr\", \"type\": \"header\", \"data\": {\"text\": \"Billing & Financial Transactions\", \"level\": 2}}, {\"id\": \"Billing Desk_sc_0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Register\", \"col\": 4}}, {\"id\": \"Billing Desk_sp\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"Billing Desk_cd_0\", \"type\": \"card\", \"data\": {\"card_name\": \"Fee Management\", \"col\": 6}}, {\"id\": \"Billing Desk_cd_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Patient & Clinical Context\", \"col\": 6}}]",
+ "creation": "2026-08-20 15:19:46.185562",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "credit-card",
+ "idx": 5,
+ "indicator_color": "purple",
+ "is_hidden": 0,
+ "label": "Billing Desk",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fee Management",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fee Records",
+   "link_count": 0,
+   "link_to": "Fee",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patient & Clinical Context",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patient Visits",
+   "link_count": 0,
+   "link_to": "Visit",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Patient Directory",
+   "link_count": 0,
+   "link_to": "Patient",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-20 15:19:46.185562",
+ "modified_by": "Administrator",
+ "module": "Hospital Management",
+ "name": "Billing Desk",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Hospital Management",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Receptionist"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 5.0,
+ "shortcuts": [
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Fee Register",
+   "link_to": "Fee",
+   "type": "DocType"
+  }
+ ],
+ "sidebar_items": [],
+ "standard": 1,
+ "title": "Billing Desk",
+ "type": "Workspace"
+}

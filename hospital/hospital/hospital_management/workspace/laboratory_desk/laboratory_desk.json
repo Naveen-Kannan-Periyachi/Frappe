@@ -1,0 +1,98 @@
+{
+ "app": "hospital",
+ "charts": [],
+ "content": "[{\"id\": \"Laboratory Desk_hdr\", \"type\": \"header\", \"data\": {\"text\": \"Laboratory Desk & Diagnostics\", \"level\": 2}}, {\"id\": \"Laboratory Desk_sc_0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pending Requests\", \"col\": 4}}, {\"id\": \"Laboratory Desk_sc_1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Lab Tests Master\", \"col\": 4}}, {\"id\": \"Laboratory Desk_sp\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"Laboratory Desk_cd_0\", \"type\": \"card\", \"data\": {\"card_name\": \"Lab Workflow\", \"col\": 6}}, {\"id\": \"Laboratory Desk_cd_1\", \"type\": \"card\", \"data\": {\"card_name\": \"Lab Setup\", \"col\": 6}}]",
+ "creation": "2026-08-20 15:19:46.287357",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "flask-conical",
+ "idx": 4,
+ "indicator_color": "orange",
+ "is_hidden": 0,
+ "label": "Laboratory Desk",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lab Workflow",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lab Test Requests",
+   "link_count": 0,
+   "link_to": "Lab Test Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lab Setup",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lab Test Catalog",
+   "link_count": 0,
+   "link_to": "Lab Test",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-08-20 15:19:46.287357",
+ "modified_by": "Administrator",
+ "module": "Hospital Management",
+ "name": "Laboratory Desk",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Hospital Management",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Lab Technician"
+  },
+  {
+   "role": "Doctor"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 4.0,
+ "shortcuts": [
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Pending Requests",
+   "link_to": "Lab Test Request",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Lab Tests Master",
+   "link_to": "Lab Test",
+   "type": "DocType"
+  }
+ ],
+ "sidebar_items": [],
+ "standard": 1,
+ "title": "Laboratory Desk",
+ "type": "Workspace"
+}
