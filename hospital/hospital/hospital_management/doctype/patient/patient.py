@@ -75,3 +75,32 @@ class Patient(Document):
             frappe.throw(
                 "Patient cannot be deleted because fee records exist."
             )
+
+@frappe.whitelist()
+def create_test_patient():
+    doc = frappe.get_doc({
+            "doctype":"Patient",
+            "patient_name" :"Test Patient",
+            "gender":"Male"
+    })
+    doc.insert()
+    return doc.name
+
+@frappe.whitelist()
+def get_patient_blood_group(patient:str)->str:
+    blood_group=frappe.db.get_value("Patient",patient,"blood_group")
+    return blood_group
+
+@frappe.whitelist()
+def update_patient_age(patient: str, blood: str) -> str:
+    doc = frappe.get_doc("Patient", patient)
+    doc.blood_group = blood
+    doc.save()
+    frappe.db.commit()
+    return f"{blood} is updated"
+
+@frappe.whitelist()
+def patient_details(patient: str) -> str:
+    name= frappe.db.get_value("Patient",patient,"patient_name") 
+    blood_group=frappe.db.get_value("Patient",patient,"blood_group")
+    return f"Patient Name:{name},Blood Group: {blood_group}"

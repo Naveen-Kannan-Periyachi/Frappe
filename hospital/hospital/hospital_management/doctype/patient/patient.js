@@ -20,8 +20,42 @@ frappe.ui.form.on("Patient", {
                     patient: frm.doc.name
                 });
             });
+            frm.add_custom_button(__("Get Blood Group"), () => {
+                frappe.call({
+                    method: "hospital.hospital_management.doctype.patient.patient.get_patient_blood_group",
+                    args: {
+                        patient: frm.doc.name
+                    },
+                    callback: function (r) {
+                        frappe.msgprint(r.message);
+                    }
+                });
+            });
+            frm.add_custom_button(__("Update Blood Group"), () => {
+                frappe.call({
+                    method: "hospital.hospital_management.doctype.patient.patient.update_patient_age",
+                    args: {
+                        patient: frm.doc.name, blood: "B+"
+                    },
+                    callback: function (r) {
+                        frappe.msgprint(r.message);
+                    }
+                });
+            });
+            frm.add_custom_button(__("Patient Details"), () => {
+                frappe.call({
+                    method: "hospital.hospital_management.doctype.patient.patient.patient_details",
+                    args: {
+                        patient: frm.doc.name
+                    },
+                    callback: function (r) {
+                        frappe.msgprint("details: " + r.message);
+                    }
+                });
+            });
         }
     },
+
 
     date_of_birth(frm) {
         if (!frm.doc.date_of_birth) {
