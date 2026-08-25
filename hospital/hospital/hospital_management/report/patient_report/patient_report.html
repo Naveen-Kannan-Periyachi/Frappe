@@ -12,23 +12,21 @@
 			<tr style="background-color: #f8f9fa; color: #374151;">
 				<th style="padding: 8px;"><%= __("Patient ID") %></th>
 				<th style="padding: 8px;"><%= __("Patient Name") %></th>
-				<th style="padding: 8px;"><%= __("Gender") %></th>
 				<th style="padding: 8px;"><%= __("Blood Group") %></th>
-				<th style="padding: 8px;"><%= __("Phone") %></th>
-				<th style="padding: 8px;"><%= __("Registration Date") %></th>
-				<th style="padding: 8px;"><%= __("Status") %></th>
 			</tr>
 		</thead>
 		<tbody>
-			<% for (let i = 0; i < data.length; i++) { %>
+			<% if (data && data.length) { %>
+				<% for (let i = 0; i < data.length; i++) { %>
+					<tr>
+						<td style="padding: 8px; font-weight: 600;"><%= data[i].name || "" %></td>
+						<td style="padding: 8px;"><%= data[i].patient_name || "" %></td>
+						<td style="padding: 8px;"><%= data[i].blood_group || "" %></td>
+					</tr>
+				<% } %>
+			<% } else { %>
 				<tr>
-					<td style="padding: 8px; font-weight: 600;"><%= data[i].name %></td>
-					<td style="padding: 8px;"><%= data[i].patient_name %></td>
-					<td style="padding: 8px;"><%= data[i].gender %></td>
-					<td style="padding: 8px;"><%= data[i].blood_group %></td>
-					<td style="padding: 8px;"><%= data[i].phone %></td>
-					<td style="padding: 8px;"><%= dateutil.str_to_user(data[i].registration_date) %></td>
-					<td style="padding: 8px;"><%= data[i].status %></td>
+					<td colspan="3" class="text-center text-muted" style="padding: 12px;"><%= __("No Patient records found") %></td>
 				</tr>
 			<% } %>
 		</tbody>
