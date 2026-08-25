@@ -11,10 +11,7 @@ def execute(filters=None):
 	conditions = {}
 	if filters and filters.get("patient_name"):
 		conditions["patient_name"] = ["like", f"%{filters.get('patient_name')}%"]
-	if filters and filters.get("blood_group"):
-		conditions["blood_group"] = filters.get("blood_group")
 
-	# Fetch all real Patient documents from MariaDB database table
 	data = frappe.get_all(
 		"Patient",
 		fields=["name", "patient_name", "blood_group"],

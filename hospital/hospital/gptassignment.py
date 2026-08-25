@@ -17,7 +17,7 @@ def generate_report(patient_name="John Doe"):
 @frappe.whitelist()
 def generate_patient_report(patient_name="John Doe"):
     frappe.enqueue(
-        method="hospital.gptassignment.generate_report",
+        method="hospital.gptassignment.generate_report",    
         queue="short",
         patient_name=patient_name
     )

@@ -53,6 +53,44 @@ frappe.ui.form.on("Patient", {
                     }
                 });
             });
+            frappe.ui.form.on("Patient", {
+                refresh(frm) {
+                    frm.add_custom_button(__("Create Task Dialog"), () => {
+                        let d = new frappe.ui.Dialog({
+                            title: __('Create New Task'),
+                            fields: [
+                                {
+                                    label: __('Task Subject'),
+                                    fieldname: 'task_subject',
+                                    fieldtype: 'Data',
+                                    reqd: 1
+                                }
+                            ],
+                            primary_action_label: __('Create Task'),
+                            primary_action(values) {
+                                frappe.call({
+                                    method: 'hospital.gptassignment.create_task',
+                                    args: {
+                                        task_subject: values.task_subject
+                                    },
+                                    callback: function (r) {
+                                        if (r.message) {
+                                            d.hide();
+                                            frappe.msgprint({
+                                                title: __('Task Created'),
+                                                message: __('Task <b>{0}</b> created successfully.', [r.message]),
+                                                indicator: 'green'
+                                            });
+                                        }
+                                    }
+                                });
+                            }
+                        });
+                        d.show();
+                    });
+                }
+            });
+
         }
     },
 

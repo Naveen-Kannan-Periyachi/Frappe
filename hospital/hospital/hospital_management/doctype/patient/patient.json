@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "PAT-.#####",
  "creation": "2026-08-11 19:00:00",
@@ -103,7 +104,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-21 13:12:41.910489",
+ "modified": "2026-08-24 16:52:52.935755",
  "modified_by": "Administrator",
  "module": "Hospital Management",
  "name": "Patient",
