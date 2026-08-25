@@ -1,0 +1,21 @@
+<h2 class="text-center"><%= __("Patient Summary Report") %></h2>
+<hr>
+
+<table class="table table-bordered text-left">
+	<thead>
+		<tr>
+			<th><%= __("Patient Name") %></th>
+			<th><%= __("Posting Date") %></th>
+			<th class="text-right"><%= __("Amount") %></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% for (let i = 0; i < data.length; i++) { %>
+			<tr>
+				<td><%= data[i].patient_name %></td>
+				<td><%= dateutil.str_to_user(data[i].posting_date) %></td>
+				<td class="text-right"><%= format_money(data[i].amount, "USD") %></td>
+			</tr>
+		<% } %>
+	</tbody>
+</table>
