@@ -84,7 +84,7 @@ def get_data(filters=None):
 		order_by="creation desc",
 	)
 
-	# Provide realistic fallback data matching Patient DocType if database is empty
+	# Fallback sample data matching Patient DocType if database has no records
 	if not data:
 		data = [
 			{
