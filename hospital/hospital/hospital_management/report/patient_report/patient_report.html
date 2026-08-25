@@ -1,34 +1,28 @@
 <div style="padding: 10px;">
 	<h2 class="text-center" style="margin-bottom: 5px; font-weight: 700; color: #1f2937;">
-		<%= __("Patient Directory Report") %>
+		{{ __("Patient Directory Report") }}
 	</h2>
 	<p class="text-center text-muted" style="font-size: 12px; margin-bottom: 20px;">
-		<%= __("Hospital Management System") %>
+		{{ __("Hospital Management System") }}
 	</p>
 	<hr style="margin-bottom: 20px; border-top: 1px solid #e5e7eb;">
 
 	<table class="table table-bordered text-left" style="width: 100%; border-collapse: collapse;">
 		<thead>
 			<tr style="background-color: #f8f9fa; color: #374151;">
-				<th style="padding: 8px;"><%= __("Patient ID") %></th>
-				<th style="padding: 8px;"><%= __("Patient Name") %></th>
-				<th style="padding: 8px;"><%= __("Blood Group") %></th>
+				<th style="padding: 8px;">{{ __("Patient ID") }}</th>
+				<th style="padding: 8px;">{{ __("Patient Name") }}</th>
+				<th style="padding: 8px;">{{ __("Blood Group") }}</th>
 			</tr>
 		</thead>
 		<tbody>
-			<% if (data && data.length) { %>
-				<% for (let i = 0; i < data.length; i++) { %>
-					<tr>
-						<td style="padding: 8px; font-weight: 600;"><%= data[i].name || "" %></td>
-						<td style="padding: 8px;"><%= data[i].patient_name || "" %></td>
-						<td style="padding: 8px;"><%= data[i].blood_group || "" %></td>
-					</tr>
-				<% } %>
-			<% } else { %>
+			{% for row in data %}
 				<tr>
-					<td colspan="3" class="text-center text-muted" style="padding: 12px;"><%= __("No Patient records found") %></td>
+					<td style="padding: 8px; font-weight: 600;">{{ row.name }}</td>
+					<td style="padding: 8px;">{{ row.patient_name }}</td>
+					<td style="padding: 8px;">{{ row.blood_group }}</td>
 				</tr>
-			<% } %>
+			{% endfor %}
 		</tbody>
 	</table>
 </div>
