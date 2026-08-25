@@ -1,49 +1,36 @@
-<div
-	style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #ffffff; padding: 24px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
-	<div style="display: flex; justify-content: space-between; align-items: center;">
-		<div>
-			<h2 style="margin: 0; font-size: 24px; font-weight: 700; color: #38bdf8;">🏥 <%= __("Patient Financial
-					Summary Report") %>
-			</h2>
-			<p style="margin: 6px 0 0 0; color: #94a3b8; font-size: 13px;">Updated Design &bull; Live Preview</p>
-		</div>
-		<div
-			style="background: rgba(56, 189, 248, 0.15); padding: 8px 16px; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.3);">
-			<span style="font-size: 12px; color: #38bdf8; font-weight: 600;">Status: Active</span>
-		</div>
-	</div>
-</div>
+<div style="padding: 10px;">
+	<h2 class="text-center" style="margin-bottom: 5px; font-weight: 700; color: #1f2937;">
+		<%= __("Patient Directory Report") %>
+	</h2>
+	<p class="text-center text-muted" style="font-size: 12px; margin-bottom: 20px;">
+		<%= __("Hospital Management System") %>
+	</p>
+	<hr style="margin-bottom: 20px; border-top: 1px solid #e5e7eb;">
 
-<table class="table table-bordered text-left"
-	style="border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-	<thead>
-		<tr style="background-color: #f1f5f9; color: #334155; font-weight: 700;">
-			<th style="padding: 12px; border-bottom: 2px solid #cbd5e1;">
-				<%= __("Patient Name") %>
-			</th>
-			<th style="padding: 12px; border-bottom: 2px solid #cbd5e1;">
-				<%= __("Posting Date") %>
-			</th>
-			<th style="padding: 12px; border-bottom: 2px solid #cbd5e1;" class="text-right">
-				<%= __("Amount") %>
-			</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% for (let i=0; i < data.length; i++) { %>
-			<tr>
-				<td style="padding: 12px; font-weight: 600; color: #0f172a;">
-					<span
-						style="display: inline-block; width: 8px; height: 8px; background-color: #10b981; border-radius: 50%; margin-right: 8px;"></span>
-					<%= data[i].patient_name %>
-				</td>
-				<td style="padding: 12px; color: #475569;">
-					<%= dateutil.str_to_user(data[i].posting_date) %>
-				</td>
-				<td style="padding: 12px; font-weight: 700; color: #059669;" class="text-right">
-					<%= format_money(data[i].amount, "USD" ) %>
-				</td>
+	<table class="table table-bordered text-left" style="width: 100%; border-collapse: collapse;">
+		<thead>
+			<tr style="background-color: #f8f9fa; color: #374151;">
+				<th style="padding: 8px;"><%= __("Patient ID") %></th>
+				<th style="padding: 8px;"><%= __("Patient Name") %></th>
+				<th style="padding: 8px;"><%= __("Gender") %></th>
+				<th style="padding: 8px;"><%= __("Blood Group") %></th>
+				<th style="padding: 8px;"><%= __("Phone") %></th>
+				<th style="padding: 8px;"><%= __("Registration Date") %></th>
+				<th style="padding: 8px;"><%= __("Status") %></th>
 			</tr>
+		</thead>
+		<tbody>
+			<% for (let i = 0; i < data.length; i++) { %>
+				<tr>
+					<td style="padding: 8px; font-weight: 600;"><%= data[i].name %></td>
+					<td style="padding: 8px;"><%= data[i].patient_name %></td>
+					<td style="padding: 8px;"><%= data[i].gender %></td>
+					<td style="padding: 8px;"><%= data[i].blood_group %></td>
+					<td style="padding: 8px;"><%= data[i].phone %></td>
+					<td style="padding: 8px;"><%= dateutil.str_to_user(data[i].registration_date) %></td>
+					<td style="padding: 8px;"><%= data[i].status %></td>
+				</tr>
 			<% } %>
-	</tbody>
-</table>
+		</tbody>
+	</table>
+</div>
